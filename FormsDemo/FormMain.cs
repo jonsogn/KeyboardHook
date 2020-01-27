@@ -22,7 +22,7 @@ namespace FormsDemo
 
         private void KeyboardHook_KeyboardEvent(object sender, KeyboardHook.Model.LowLevelKeyEventArgs e)
         {
-            tbOutput.Text += $"Time: {e.Timestamp}, Key: {(Keys)e.VirtualKeyCode}, Event: {e.EventType}" + Environment.NewLine;
+            tbOutput.AppendText($"Time: {e.Timestamp}, Key: {(Keys)e.VirtualKeyCode}, Event: {e.EventType}, Flags: {e.EventFlags}" + Environment.NewLine);
         }
 
         public FormMain()
@@ -49,6 +49,11 @@ namespace FormsDemo
         private void BtnUnhook_Click(object sender, EventArgs e)
         {
             KeyboardHook.UninstallHook();
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            tbOutput.Text = string.Empty;
         }
     }
 }

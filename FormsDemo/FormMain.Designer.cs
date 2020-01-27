@@ -32,6 +32,7 @@
             this.btnHook = new System.Windows.Forms.Button();
             this.btnUnhook = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbOutput
@@ -42,7 +43,7 @@
             this.tbOutput.Location = new System.Drawing.Point(12, 56);
             this.tbOutput.Multiline = true;
             this.tbOutput.Name = "tbOutput";
-            this.tbOutput.Size = new System.Drawing.Size(240, 70);
+            this.tbOutput.Size = new System.Drawing.Size(548, 258);
             this.tbOutput.TabIndex = 0;
             // 
             // btnHook
@@ -68,7 +69,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(177, 12);
+            this.btnExit.Location = new System.Drawing.Point(485, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 38);
             this.btnExit.TabIndex = 3;
@@ -76,18 +77,29 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(175, 12);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 38);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 138);
+            this.ClientSize = new System.Drawing.Size(572, 326);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUnhook);
             this.Controls.Add(this.btnHook);
             this.Controls.Add(this.tbOutput);
             this.MinimumSize = new System.Drawing.Size(280, 177);
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "Demo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +111,6 @@
         private System.Windows.Forms.Button btnHook;
         private System.Windows.Forms.Button btnUnhook;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClear;
     }
 }
